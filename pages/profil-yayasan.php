@@ -32,7 +32,6 @@ include __DIR__ . '/../includes/header.php';
     <div style="position:relative; padding-bottom:56.25%; height:0; border-radius:12px; overflow:hidden; background:#000;">
       <iframe src="https://www.youtube.com/embed/GANTI_DENGAN_ID_VIDEO" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
     </div>
-    <p style="font-size:12.5px; color:#6a6a6a; margin-top:10px;">Ganti tautan video di atas dengan video profil pondok yang sudah ada.</p>
   </div>
 </section>
 

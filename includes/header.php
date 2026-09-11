@@ -5,44 +5,47 @@ $active = $active ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?= e($page_title) ?> - Pondok Pesantren Amaliah</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?= e($page_title) ?> - Pondok Pesantren Amaliah</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap"
+    rel="stylesheet">
 
-<!-- Tailwind CSS (CDN, cocok buat development/tugas kuliah. Kalau udah mau ke hosting production,
+  <!-- Tailwind CSS (CDN, cocok buat development/tugas kuliah. Kalau udah mau ke hosting production,
      enaknya compile pakai Tailwind CLI biar lebih ringan & cepat, bukan CDN) -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          teal: '#006b7d',
-          'teal-deep': '#013843',
-          orange: '#ee7a00',
-          cream: '#FBF8F3',
-          'teal-tint': '#E3F0F1',
-          ink: '#14262A',
-          gold: '#B8901F',
-        },
-        fontFamily: {
-          display: ['Fraunces', 'serif'],
-          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          mono: ['"IBM Plex Mono"', 'monospace'],
-        },
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: '#006b7d',
+            'teal-deep': '#013843',
+            orange: '#ee7a00',
+            cream: '#FBF8F3',
+            'teal-tint': '#E3F0F1',
+            ink: '#14262A',
+            gold: '#B8901F',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace'],
+          },
+        }
       }
     }
-  }
-</script>
+  </script>
 
-<!-- AOS - library animasi scroll, ringan dan tinggal pasang data-aos di HTML -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- AOS - library animasi scroll, ringan dan tinggal pasang data-aos di HTML -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<style type="text/tailwindcss">
-  @layer base {
+  <style type="text/tailwindcss">
+    @layer base {
     html { scroll-behavior: smooth; }
     body { @apply font-sans text-ink bg-white; }
     img { @apply max-w-full block; }
@@ -189,36 +192,44 @@ $active = $active ?? '';
   }
 </style>
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="navbar-inner">
-    <a href="<?= BASE_URL ?>/index.php" class="navbar-brand">Pondok Pesantren Amaliah<span>Yayasan YPSPIA &middot; Ciawi, Bogor</span></a>
-    <ul class="navbar-menu">
-      <li><a href="<?= BASE_URL ?>/index.php" class="<?= $active=='home'?'active':'' ?>">Beranda</a></li>
-      <li><a href="<?= BASE_URL ?>/pages/profil-yayasan.php" class="<?= $active=='profil'?'active':'' ?>">Profil</a></li>
-      <li><a href="<?= BASE_URL ?>/pages/jenjang-smp.php" class="<?= $active=='smp'?'active':'' ?>">SMP</a></li>
-      <li><a href="<?= BASE_URL ?>/pages/jenjang-sma.php" class="<?= $active=='sma'?'active':'' ?>">SMA</a></li>
-      <li><a href="<?= BASE_URL ?>/pages/fasilitas.php" class="<?= $active=='fasilitas'?'active':'' ?>">Fasilitas</a></li>
-      <li><a href="<?= BASE_URL ?>/pages/struktur-pengajar.php" class="<?= $active=='pengajar'?'active':'' ?>">Pengajar</a></li>
-      <li><a href="<?= BASE_URL ?>/pages/berita.php" class="<?= $active=='berita'?'active':'' ?>">Berita</a></li>
-      <li><a href="<?= BASE_URL ?>/pages/kontak.php" class="<?= $active=='kontak'?'active':'' ?>">Kontak</a></li>
-    </ul>
-    <a href="<?= BASE_URL ?>/pages/psb.php" class="navbar-cta">Daftar PSB</a>
-    <button class="navbar-toggle" onclick="document.getElementById('navMobile').classList.toggle('open')" aria-label="Buka menu">
-      <div></div><div></div><div></div>
-    </button>
-  </div>
-  <div class="navbar-mobile" id="navMobile">
-    <a href="<?= BASE_URL ?>/index.php">Beranda</a>
-    <a href="<?= BASE_URL ?>/pages/profil-yayasan.php">Profil Yayasan</a>
-    <a href="<?= BASE_URL ?>/pages/jenjang-smp.php">Jenjang SMP</a>
-    <a href="<?= BASE_URL ?>/pages/jenjang-sma.php">Jenjang SMA</a>
-    <a href="<?= BASE_URL ?>/pages/fasilitas.php">Fasilitas</a>
-    <a href="<?= BASE_URL ?>/pages/struktur-pengajar.php">Struktur &amp; Pengajar</a>
-    <a href="<?= BASE_URL ?>/pages/berita.php">Berita &amp; Kegiatan</a>
-    <a href="<?= BASE_URL ?>/pages/galeri.php">Galeri</a>
-    <a href="<?= BASE_URL ?>/pages/psb.php">PSB</a>
-    <a href="<?= BASE_URL ?>/pages/kontak.php">Kontak</a>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="<?= BASE_URL ?>/index.php" class="navbar-brand">Pondok Pesantren Amaliah<span>Yayasan YPSPIA &middot;
+          Ciawi, Bogor</span></a>
+      <ul class="navbar-menu">
+        <li><a href="<?= BASE_URL ?>/index.php" class="<?= $active == 'home' ? 'active' : '' ?>">Beranda</a></li>
+        <li><a href="<?= BASE_URL ?>/pages/profil-yayasan.php" class="<?= $active == 'profil' ? 'active' : '' ?>">Profil</a>
+        </li>
+        <li><a href="<?= BASE_URL ?>/pages/jenjang-smp.php" class="<?= $active == 'smp' ? 'active' : '' ?>">SMP</a></li>
+        <li><a href="<?= BASE_URL ?>/pages/jenjang-sma.php" class="<?= $active == 'sma' ? 'active' : '' ?>">SMA</a></li>
+        <li><a href="<?= BASE_URL ?>/pages/fasilitas.php" class="<?= $active == 'fasilitas' ? 'active' : '' ?>">Fasilitas</a>
+        </li>
+        <li><a href="<?= BASE_URL ?>/pages/struktur-pengajar.php"
+            class="<?= $active == 'pengajar' ? 'active' : '' ?>">Pengajar</a></li>
+        <li><a href="<?= BASE_URL ?>/pages/berita.php" class="<?= $active == 'berita' ? 'active' : '' ?>">Berita</a></li>
+        <li><a href="<?= BASE_URL ?>/pages/kontak.php" class="<?= $active == 'kontak' ? 'active' : '' ?>">Kontak</a></li>
+      </ul>
+      <a href="<?= BASE_URL ?>/pages/psb.php" class="navbar-cta">Daftar PSB</a>
+      <button class="navbar-toggle" onclick="document.getElementById('navMobile').classList.toggle('open')"
+        aria-label="Buka menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+    </div>
+    <div class="navbar-mobile" id="navMobile">
+      <a href="<?= BASE_URL ?>/index.php">Beranda</a>
+      <a href="<?= BASE_URL ?>/pages/profil-yayasan.php">Profil Yayasan</a>
+      <a href="<?= BASE_URL ?>/pages/jenjang-smp.php">Jenjang SMP</a>
+      <a href="<?= BASE_URL ?>/pages/jenjang-sma.php">Jenjang SMA</a>
+      <a href="<?= BASE_URL ?>/pages/fasilitas.php">Fasilitas</a>
+      <a href="<?= BASE_URL ?>/pages/struktur-pengajar.php">Struktur &amp; Pengajar</a>
+      <a href="<?= BASE_URL ?>/pages/berita.php">Berita &amp; Kegiatan</a>
+      <a href="<?= BASE_URL ?>/pages/galeri.php">Galeri</a>
+      <a href="<?= BASE_URL ?>/pages/psb.php">PSB</a>
+      <a href="<?= BASE_URL ?>/pages/kontak.php">Kontak</a>
+    </div>
+  </nav>

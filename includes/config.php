@@ -27,7 +27,7 @@ try {
 $site = [
     'nama'      => 'Pondok Pesantren Amaliah',
     'yayasan'   => 'Yayasan Pusat Studi Pengembangan Islam Amaliyah (YPSPIA)',
-    'alamat'    => 'Jl. Raya Ciawi, Bogor, Jawa Barat',
+    'alamat'    => 'Jl. Tol Ciawi No. 1 (Komplek Universitas Djuanda Bogor)',
     'telepon'   => '0895-1559-1058',
     'email'     => 'info@amaliah.sch.id',
     'ig_putra'  => '@ppbintaamaliyah',

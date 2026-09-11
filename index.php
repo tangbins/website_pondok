@@ -29,9 +29,9 @@ include __DIR__ . '/includes/header.php';
 
 <div class="stats">
   <div class="stat" data-aos="fade-up"><div class="num">2</div><div class="label">Jenjang</div></div>
-  <div class="stat" data-aos="fade-up"><div class="num">600+</div><div class="label">Santri</div></div>
+  <div class="stat" data-aos="fade-up"><div class="num">50+</div><div class="label">Santri</div></div>
   <div class="stat" data-aos="fade-up"><div class="num">30 juz</div><div class="label">Target tahfidz</div></div>
-  <div class="stat" data-aos="fade-up"><div class="num">15+</div><div class="label">Tahun berdiri</div></div>
+  <div class="stat" data-aos="fade-up"><div class="num">5</div><div class="label">Tahun berdiri</div></div>
 </div>
 
 <section class="section">
