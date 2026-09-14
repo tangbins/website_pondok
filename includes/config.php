@@ -7,10 +7,10 @@ define('BASE_URL', '/website_pondok');
 // Konfigurasi koneksi database
 // Sesuaikan kalau di hosting nanti username/password-nya beda
 
-$db_host = 'localhost';
-$db_name = 'pesantren_amaliah';
-$db_user = 'root';
-$db_pass = '';
+$db_host = 'sql103.infinityfree.com';
+$db_name = 'if0_42886906_pesantren';
+$db_user = 'if0_42886906';
+$db_pass = 'Bintang0807';
 
 try {
     $pdo = new PDO(

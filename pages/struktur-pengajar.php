@@ -21,7 +21,7 @@ include __DIR__ . '/../includes/header.php';
 <section class="hero" data-aos="fade-in" style="padding-bottom:40px;">
   <div class="hero-inner">
     <div class="hero-eyebrow">Kepengurusan</div>
-    <h1>Struktur &amp; Pengajar</h1>
+    <h1>Struktur &amp; pengajar</h1>
     <p>Dibina langsung oleh pengasuh, dijalankan tim struktural, dan dididik oleh tenaga pengajar berpengalaman di bidangnya.</p>
   </div>
 </section>
