@@ -1,16 +1,23 @@
 <?php
-// PENTING: sesuaikan ini kalau nama foldernya beda / ganti hosting.
-// Kalau website ditaruh di localhost/website_pondok/  -> isi '/website_pondok'
-// Kalau website ditaruh langsung di root domain (di hosting nanti) -> isi '' (string kosong)
-define('BASE_URL', '/website_pondok');
+// Deteksi otomatis: ini dibuka dari lokal (Laragon) atau dari hosting InfinityFree?
+$host = $_SERVER['HTTP_HOST'] ?? '';
+$is_local = (strpos($host, 'localhost') !== false || strpos($host, '127.0.0.1') !== false);
 
-// Konfigurasi koneksi database
-// Sesuaikan kalau di hosting nanti username/password-nya beda
-
-$db_host = 'sql103.infinityfree.com';
-$db_name = 'if0_42886906_pesantren';
-$db_user = 'if0_42886906';
-$db_pass = 'Bintang0807';
+if ($is_local) {
+    // ===== Konfigurasi buat development di Laragon =====
+    define('BASE_URL', '/website_pondok'); // sesuaikan kalau nama folder lokal kamu beda
+    $db_host = 'localhost';
+    $db_name = 'pesantren_amaliah';
+    $db_user = 'root';
+    $db_pass = '';
+} else {
+    // ===== Konfigurasi buat production di InfinityFree =====
+    define('BASE_URL', '');
+    $db_host = 'sql103.infinityfree.com';
+    $db_name = 'if0_42886906_pesantren';
+    $db_user = 'if0_42886906';
+    $db_pass = 'Bintang0807';
+}
 
 try {
     $pdo = new PDO(
@@ -27,7 +34,7 @@ try {
 $site = [
     'nama'      => 'Pondok Pesantren Amaliah',
     'yayasan'   => 'Yayasan Pusat Studi Pengembangan Islam Amaliyah (YPSPIA)',
-    'alamat'    => 'Jl. Tol Ciawi No. 1 (Komplek Universitas Djuanda Bogor)',
+    'alamat'    => 'Jl. Raya Ciawi, Bogor, Jawa Barat',
     'telepon'   => '0895-1559-1058',
     'email'     => 'info@amaliah.sch.id',
     'ig_putra'  => '@ppbintaamaliyah',
